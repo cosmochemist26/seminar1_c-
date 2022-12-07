@@ -17,14 +17,14 @@
 
 double CalcDistance(double[] a, double[] b)
 {
-    double distance = 0.0;
+    double Distance = 0.0;
 
     for (int i = 0; i < a.Length; i++)
     {
-        distance += Math.Pow(b[i] - a[i], 2);
+        Distance += Math.Pow(b[i] - a[i], 2);
     }
     
-    return Math.Round(Math.Sqrt(distance), 2);
+    return Math.Round(Math.Sqrt(Distance), 2);
     
 }
 
