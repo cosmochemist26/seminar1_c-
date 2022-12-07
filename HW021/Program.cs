@@ -1,4 +1,6 @@
-﻿double[] ReadPointCoord(string msg)
+﻿//Метод считывания данных с консоли в формате x y z и преобразует в массив вещественных чисел
+
+double[] ReadPointCoord(string msg)
 {
     Console.WriteLine(msg);
 
@@ -15,6 +17,8 @@
     return Coords.ToArray();
 }
 
+//Метод определения расстояния между двумя точками в трехмерном пространстве
+
 double CalcDistance(double[] a, double[] b)
 {
     double Distance = 0.0;
@@ -27,6 +31,8 @@ double CalcDistance(double[] a, double[] b)
     return Math.Round(Math.Sqrt(Distance), 2);
     
 }
+
+//вызов методов
 
 double[] a = ReadPointCoord("Введите координаты точки А через пробел:");
 double[] b = ReadPointCoord("Введите координаты точки B через пробел:");

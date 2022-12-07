@@ -1,9 +1,11 @@
-﻿int ReadData(string msg)
+﻿//Метод(функция), которая считывает ввод с консоли и преобразует(парсит) его в число типа инт
+int ReadData(string msg)
 {
     Console.WriteLine(msg);
     return int.Parse(Console.ReadLine()??"0");
 }
 
+// Метод с невозвращаемым значением определяет палиндром
 void is_palindrome(int number)
 {
     int first = number / 10000;
@@ -21,6 +23,8 @@ void is_palindrome(int number)
     }
 
 }
+
+//вызов методов
 
 int number = ReadData("Введите пятизначное число");
 
