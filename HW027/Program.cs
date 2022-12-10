@@ -3,30 +3,29 @@ int[] ReadIntArray(string msg)
 {
     Console.WriteLine(msg);
 
-    string? Line = Console.ReadLine()??"0";
+    string? Line = Console.ReadLine() ?? "0";
     char[] Array = Line.ToCharArray();
+
+    int[] IntArray = new int[Array.Length];
 
     if (Array[0] == '-')
     {
-        int[] IntArray = new int[Array.Length - 1];
-
         for (int i = 1; i < Array.Length; i++)
         {
-            IntArray[i-1] = int.Parse(Array[i]);
+            IntArray[i-1] = int.Parse(Array[i].ToString());
         }
     
     }
     else
     {
-        int[] IntArray = new int[Array.Length];
 
         for (int i = 0; i < Array.Length; i++)
         {
-            IntArray[i] = int.Parse(Array[i]);
+            IntArray[i] = int.Parse(Array[i].ToString());
         }
     }
     
-   return IntArray;
+    return IntArray;
 }
 
 int SumOfDigits(int[] Array)
